@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-datepicker-uniform-date-format",
   "version": "1.0.0",
-  "description": "Use uniform date format to submit for bootstrap datepicker",
+  "description": "Normalize the date format for submission used in bootstrap datepicker",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
