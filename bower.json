@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap-datepicker-uniform-date-format",
+  "description": "Use uniform date format to submit for bootstrap datepicker",
+  "main": "index.js",
+  "authors": [
+    "Ryan Wang"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bootstrap-datepicker",
+    "alt-field",
+    "datepicker",
+    "normalize-date-format",
+    "uniform-date-format"
+  ],
+  "homepage": "https://github.com/wongyouth/bootstrap-datepicker-uniform-date-format",
+  "ignore": [
+    "**/.*",
+    "package.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
