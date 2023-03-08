@@ -42,9 +42,20 @@ This parameter can also be passed in the form of HTML attributes.
 />
 ```
 
+## Examples
+
+https://codesandbox.io/s/bootstrap-datepicker-uniform-date-format-examples-4steyu
+
 ## How it works
 
 The code is only 30 lines long and easy to understand. By adding a `decorator` to the `datepicker` function, the code generates a hidden input box for form submission.
+
+
+
+## Support Versions
+
+[bootstrap datepicker][datepicker] v1.9.0
+
 
 ## License
 

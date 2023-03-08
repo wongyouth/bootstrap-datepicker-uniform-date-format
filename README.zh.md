@@ -49,10 +49,19 @@ $('.datepicker').datepicker({
 
 ```
 
+## 例子
+
+https://codesandbox.io/s/bootstrap-datepicker-uniform-date-format-examples-4steyu
+
 
 ## 如何工作
 
 代码一个就 30 行，浅显易懂，通过给 `datepicker` 函数加了 `decorator` 的方式，改写了代码生成用于表单上传的隐藏输入框。
+
+
+## 支持版本
+
+[bootstrap datepicker][datepicker] v1.9.0
 
 ## License
 
