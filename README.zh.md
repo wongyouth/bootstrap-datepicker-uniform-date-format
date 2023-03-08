@@ -1,8 +1,6 @@
-在提交 HTML 表格前格式化 `bootstrap datepicker` 的日期
+在提交 HTML 表格前格式化 [bootstrap datepicker][datepicker]  的日期
 
-[English][]
-
-English: https://github.com/wongyouth/bootstrap-datepicker-uniform-date-format/README.md
+[English](README.md)
 
 ## 问题描述
 
@@ -59,3 +57,7 @@ $('.datepicker').datepicker({
 ## License
 
 MIT
+
+
+
+[datepicker]: https://github.com/uxsolutions/bootstrap-datepicker

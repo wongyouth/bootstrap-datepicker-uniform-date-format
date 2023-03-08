@@ -1,8 +1,6 @@
-Format the date of `bootstrap datepicker` before submitting the HTML form
+Format the date of [bootstrap datepicker][datepicker]  before submitting the HTML form
 
-[中文说明][]
-
-中文说明: https://github.com/wongyouth/bootstrap-datepicker-uniform-date-format/README.zh.md
+[中文说明](README.zh.md)
 
 ## Problem description
 
@@ -51,3 +49,7 @@ The code is only 30 lines long and easy to understand. By adding a `decorator` t
 ## License
 
 MIT
+
+
+
+[datepicker]: https://github.com/uxsolutions/bootstrap-datepicker
