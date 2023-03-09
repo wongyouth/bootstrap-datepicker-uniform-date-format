@@ -48,7 +48,7 @@ https://codesandbox.io/s/bootstrap-datepicker-uniform-date-format-examples-4stey
 
 ## How it works
 
-The code is only 30 lines long and easy to understand. By adding a `decorator` to the `datepicker` function, the code generates a hidden input box for form submission.
+The code is concise and easy to understand. By adding a `decorator` to the `datepicker` function, the code generates a hidden input box for form submission.
 
 
 

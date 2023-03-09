@@ -56,7 +56,7 @@ https://codesandbox.io/s/bootstrap-datepicker-uniform-date-format-examples-4stey
 
 ## 如何工作
 
-代码一个就 30 行，浅显易懂，通过给 `datepicker` 函数加了 `decorator` 的方式，改写了代码生成用于表单上传的隐藏输入框。
+代码量很少浅显易懂，通过给 `datepicker` 函数加了 `decorator` 的方式，改写了代码生成用于表单上传的隐藏输入框。
 
 
 ## 支持版本
