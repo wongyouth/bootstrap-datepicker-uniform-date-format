@@ -19,8 +19,22 @@
     return this;
   };
 
-  attach('[data-provide="datepicker"]');
-  attach('[data-provide="datepicker-inline"]');
+  [
+    "DPGlobal",
+    "dates",
+    "defaults",
+    "deprecated",
+    "locale_opts",
+    "noConflict",
+    "version"
+  ].forEach(function (item) {
+    $.fn.datepicker[item] = datepicker[item];
+  });
+
+  $(function () {
+    attach('[data-provide="datepicker"]');
+    attach('[data-provide="datepicker-inline"]');
+  });
 
   function setup($el, option) {
     // get date format for submission
