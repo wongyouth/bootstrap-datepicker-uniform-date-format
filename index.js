@@ -1,28 +1,42 @@
 (function ($) {
   var datepicker = $.fn.datepicker;
 
-  $.fn.datepicker = function (options) {
+  $.fn.datepicker = function (option) {
+    var args = Array.apply(null, arguments);
+    args.shift();
+
     this.each(function () {
-      var el = $(this);
+      var $el = $(this);
+      var dp = $el.data("datepicker");
 
-      // get date format for submission
-      var uniformFormat =
-        options.uniformFormat || el.data("date-uniform-format") || "yyyy-mm-dd";
+      if (!dp) setup($el, option);
 
-      // add hidden input to store normalized date string for submission
-      var dateEl = $(`<input type="hidden">`).attr("name", el.attr("name"));
-      el.attr("name", null);
-
-      // store date when changed
-      datepicker.call(el, options).on("changeDate", (e) => {
-        dateEl.val(e.format(uniformFormat));
-      });
-
-      // store initial date
-      datepicker.call(el, "setDate", el.val());
-
-      // add input to DOM tree
-      el.after(dateEl);
+      if (typeof option === "string" && typeof dp[option] === "function") {
+        dp[option].apply(dp, args);
+      }
     });
+
+    return this;
   };
+
+  function setup($el, option) {
+    // get date format for submission
+    var uniformFormat =
+      option.uniformFormat || $el.data("date-uniform-format") || "yyyy-mm-dd";
+
+    // add hidden input to store normalized date string for submission
+    var dateEl = $(`<input type="hidden">`).attr("name", $el.attr("name"));
+    $el.attr("name", null);
+
+    // store date when changed
+    datepicker.call($el, option).on("changeDate", (e) => {
+      dateEl.val(e.format(uniformFormat));
+    });
+
+    // store initial date
+    datepicker.call($el, "setDate", $el.val());
+
+    // add input to DOM tree
+    $el.after(dateEl);
+  }
 })(jQuery);
