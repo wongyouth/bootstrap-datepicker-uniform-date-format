@@ -19,14 +19,21 @@
     return this;
   };
 
+  attach('[data-provide="datepicker"]');
+  attach('[data-provide="datepicker-inline"]');
+
   function setup($el, option) {
     // get date format for submission
     var uniformFormat =
-      option.uniformFormat || $el.data("date-uniform-format") || "yyyy-mm-dd";
+      (option && option.uniformFormat) ||
+      $el.data("date-uniform-format") ||
+      "yyyy-mm-dd";
 
     // add hidden input to store normalized date string for submission
     var dateEl = $(`<input type="hidden">`).attr("name", $el.attr("name"));
     $el.attr("name", null);
+
+    var date = $el.val();
 
     // store date when changed
     datepicker.call($el, option).on("changeDate", (e) => {
@@ -34,9 +41,15 @@
     });
 
     // store initial date
-    datepicker.call($el, "setDate", $el.val());
+    datepicker.call($el, "setDate", date);
 
     // add input to DOM tree
     $el.after(dateEl);
+  }
+
+  function attach(selector) {
+    $(selector).each(function () {
+      setup($(this));
+    });
   }
 })(jQuery);
